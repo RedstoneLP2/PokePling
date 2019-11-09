@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = PokePling.MODID, name = PokePling.NAME, version = PokePling.VERSION, acceptableRemoteVersions = "*")
+@Mod(modid = PokePling.MODID, name = PokePling.NAME, version = PokePling.VERSION, acceptableRemoteVersions = "*", clientSideOnly = true)
 public class PokePling {
     public static final String MODID = "pokepling";
     public static final String NAME = "PokePling";
