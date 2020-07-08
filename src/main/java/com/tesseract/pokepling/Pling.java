@@ -17,7 +17,7 @@ public void onChat(ClientChatReceivedEvent e) {
         SoundEvent event = new SoundEvent(location);
         String s = e.getMessage().getUnformattedText();
         String username = player.getDisplayNameString();
-        if (!s.split(" ", 0)[0].contains("<")){
+        if (!s.split(" ", 0)[0].contains("<")&&!s.split(" ", 0)[0].contains("[")){
                 return;
         }
         String[] sArr = s.split(" ", 0);
