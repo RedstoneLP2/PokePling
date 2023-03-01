@@ -1,4 +1,4 @@
-package com.tesseract.pokepling;
+package com.redstonelp2.pokepling;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;

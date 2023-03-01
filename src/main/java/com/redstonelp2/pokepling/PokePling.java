@@ -1,4 +1,4 @@
-package com.tesseract.pokepling;
+package com.redstonelp2.pokepling;
 
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
