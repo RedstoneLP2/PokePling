@@ -3,9 +3,9 @@ package com.redstonelp2.pokepling;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
+import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -18,13 +18,13 @@ public class Pling {
         SoundEvent sound;
         Pling(){
                 ResourceLocation location = new ResourceLocation("minecraft", "block.note_block.pling");
-                sound = new SoundEvent(location);
+                sound = SoundEvent.createVariableRangeEvent(location);
                 MinecraftForge.EVENT_BUS.register(this);
         }
 
         @SubscribeEvent
         public void onChat(ClientChatReceivedEvent e) {
-                ClientPlayerEntity player = Minecraft.getInstance().player;
+                LocalPlayer player = Minecraft.getInstance().player;
                 String username = player.getDisplayName().getString();
                 String s = e.getMessage().getString();
                 if (!s.split(" ", 0)[0].contains("<")&&!s.split(" ", 0)[0].contains("[")){
